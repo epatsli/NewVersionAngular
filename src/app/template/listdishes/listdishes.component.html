@@ -1,6 +1,7 @@
 <div class="buttons">
   <button class="button" [routerLink]="['/listdishes/add-dish'] ">Nowe danie</button>
   <button class="button" [routerLink]="['/listorders/'] ">Lista zamówień</button>
+  <button (click)="deleteAllDish()"> Usuń wszystkie dania</button>
 </div>
 
 <div class="centers">
@@ -29,7 +30,7 @@
       <td>
         <button [routerLink]="['details/', d.id]" class="button">Details</button>
       </td>
-      <td><button (click)="dishService.deleteDish(d.id)"> -</button></td>
+      <td><button (click)="deleteDish(d.id)"> -</button></td>
     </tr>
   </table>
 </div>

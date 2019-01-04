@@ -1,6 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {ListdishesService} from './listdishes.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Dish} from '../../models/dish.model';
 import {Subscription} from 'rxjs';
 import {DishesService} from '../../dishes/dishes.service';
@@ -51,6 +51,17 @@ export class ListdishesComponent implements OnInit {
 
     console.log(dish.id);
     this.sub = this.dishService.updateDish(dish).subscribe();
+  }
+
+  deleteDish(id: number) {
+    this.dishService.deleteDish(id)
+      .subscribe(() => {
+        this.dish = this.dish.filter(d => d.id !== id);
+      });
+  }
+
+  deleteAllDish(){
+    this.dishService.deleteAllDish().subscribe(res => this.dish = res);
   }
 /*
   deleteDish() {

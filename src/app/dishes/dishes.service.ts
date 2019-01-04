@@ -53,19 +53,23 @@ export class DishesService {
     return this.http.put<Dish>(`/api/dishes/${dish.id}`, dish);
   }
 
+  deleteDish(id: number): Observable<any> {
+    return this.http.delete<any>(`/api/dishes/${id}`);
+  }
+/*
   deleteDish(dish: Dish): Observable<Dish> {
     console.log('Delete dish');
     return this.http.delete<Dish>(`/api/dishes/${dish.id}`);
   }
-
+*/
 /*
   deleteDish(id: number): Observable<any> {
     console.log('Delete dish');
     return this.http.delete(`/api/dishes/${id}`, { responseType: 'text' });
   }
 */
-  deleteAll(): Observable<any> {
-    return this.http.delete('/api/dishes/delete', { responseType: 'text' });
+  deleteAllDish(): Observable<any> {
+    return this.http.delete('/api/dishes/delete');
   }
 
   saveDish(dish: Dish): Observable<Dish> {
