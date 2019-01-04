@@ -1,0 +1,29 @@
+<div class="buttons">
+  <button class="button" [routerLink]="['/listdishes/'] ">Lista dań</button>
+</div>
+
+<div class="centers">
+  <table>
+
+    <tr>
+      <th>Id:</th>
+      <th>Buyer:</th>
+      <th>Dishes:</th>
+      <th>Address:</th>
+      <th>Status:</th>
+    </tr>
+
+    <tr *ngFor="let order of orders">
+      <td>{{order.id}}</td>
+      <td>{{order.firstName}} {{order.lastName}}</td>
+      <td>
+        <button class="button" [routerLink]="['/listorders/order/', order.id]">Details</button>
+      </td>
+      <td>
+        <button class="button" [routerLink]="['/listorders/address-details/', order.id]">Details</button>
+      </td>
+      <td>{{order.status}}</td>
+    </tr>
+
+  </table>
+</div>

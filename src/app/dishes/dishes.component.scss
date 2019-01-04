@@ -1,0 +1,116 @@
+table, td, th {
+  border: 1px solid #ddd;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.725);
+}
+
+table {
+  border-collapse: collapse;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  padding: 15px;
+//  background-color: #A9A9A9
+ // background-color: rgba(255, 255, 255, 0.725);
+}
+
+td {
+  padding: 15px;
+}
+
+.buttonAdd {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  padding: 7px;
+  border-radius: 30%;
+  margin: 5px 3px;
+  width: 36px;
+}
+
+.buttonAdd:hover {
+  background-color: #3e8e41
+}
+
+.buttonAdd:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px)
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #515151;
+  border: none;
+  border-radius: 15px;
+ // box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #808080}
+
+:host {
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  flex-grow: 1;
+}
+
+:host.is-open {
+  display: block;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140%;
+}
+
+
+
+.dish-container{
+  display: flex;
+  text-align: center;
+  width: auto;
+  margin-left: 50px;
+  margin-right:auto;
+}
+
+.dish-container > div {
+  margin: 10px;
+  padding: 20px;
+}
+
+.buttonsContainer{
+  margin-bottom: 5px;
+  width: auto;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(245, 248, 72, 0.603);
+
+
+  .menuBox{
+    display:flex;
+  }
+}

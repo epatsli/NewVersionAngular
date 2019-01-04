@@ -1,0 +1,49 @@
+<div>
+  <a class = "back" routerLink="/listdishes" routerLinkActive="active">Powrót</a>
+</div>
+
+<div class = "addDish-container">
+
+  <form [formGroup]="formAddDish" (ngSubmit)="onSubmit()">
+    <h2>Dodaj nowe danie</h2>
+    <label for="name">
+      Nazwa:
+      <input type="text" formControlName="name" required id="name" name="name">
+    </label>
+    <p>
+      <label for="isAvailable">
+        <div class="avalBut">Dostępne:</div>
+        <input type="checkbox" formControlName="isAvailable" id="isAvailable" name="isAvailable">
+      </label>
+    <p>
+      <label for="description">
+        Opis:
+        <input type="text" formControlName="description" class="description" id="description" name="description">
+      </label>
+    <p>
+      <label for="type">
+        Typ:
+        <input type="text" formControlName="type" id="type" name="type">
+      </label>
+    <p>
+      <label for="price">
+        Cena:
+        <input type="text" formControlName="price" id="price" name="price" required>
+      </label>
+    <p>
+      <button class="button">Zapisz danie</button>
+    </p>
+
+    <div class="statusInfo">
+      <div *ngIf="formAddDish.status==='VALID'" class="valid">
+        Dane poprawne
+      </div>
+      <div *ngIf="formAddDish.status==='INVALID'" class="invalid">
+        Dane niepoprawne, nazwa i typ obowiązkowe, cena musi być liczbą
+      </div>
+    </div>
+
+  </form>
+</div>
+
+

@@ -1,0 +1,41 @@
+<div class="box">
+  <div *ngIf="order">
+    <h3>#Order: {{order.id}}</h3>
+
+    <div class="nextTo">
+      <table>
+        <tr>
+          <th>Dish</th>
+          <th>Price</th>
+        </tr>
+        <tr *ngFor=" let d of order.dishIds">
+          <td>{{dishes[d-1].name}}</td>
+          <td>{{dishes[d-1].price}}</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th>Count</th>
+        </tr>
+        <tr *ngFor=" let a of order.amountDish">
+          <td>{{order.amountDish[a-1]}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <h4>Price: {{order.price}} PLN</h4>
+
+    <div> This order is <b>{{order.status}}</b>.</div>
+    <br><br>
+    <div class="center"> Change order status:</div>
+    <div class="pos">
+      <button class="button" (click)="changeStatusToInProgress()">In progress</button>
+      <button class="button" (click)="changeStatusToInDelivery()">In delivery</button>
+      <button class="button" (click)="changeStatusToDelivered()">Delivered</button>
+    </div>
+  </div>
+</div>
+<div class="rightDiv">
+  <a routerLink="/listorders/">Back</a>
+</div>

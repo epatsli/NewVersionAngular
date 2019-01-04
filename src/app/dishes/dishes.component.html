@@ -1,0 +1,28 @@
+<div class="dish-container">
+
+<div>
+  <app-shopping-cart></app-shopping-cart>
+</div>
+
+<div>
+  <button class="button" (click)="getPizza()">Pizze</button>
+  <button class="button" (click)="getPasta()">Makarony</button>
+  <button class="button" (click)="getDrinks()">Napoje</button>
+
+  <table>
+    <tr>
+      <th>Name:</th>
+      <th>Description:</th>
+      <th>Price:</th>
+    </tr>
+
+    <tr *ngFor="let d of dish">
+      <td>{{d.name}}</td>
+      <td>{{d.description}}</td>
+      <td>{{d.price}}</td>
+      <button class="buttonAdd" (click)="addDishToOrder(d)"> +</button>
+    </tr>
+  </table>
+</div>
+
+

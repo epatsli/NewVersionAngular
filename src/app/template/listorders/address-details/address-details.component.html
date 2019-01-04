@@ -1,0 +1,23 @@
+<div class="centers">
+<div *ngIf="order">
+  <table>
+    <tr>
+      <th>Ulica:</th>
+      <th>Numer domu:</th>
+      <th>Miasto:</th>
+      <th>Kod pocztowy:</th>
+    </tr>
+
+    <tr>
+      <td>{{order.street}}</td>
+      <td>{{order.houseNumber}}</td>
+      <td>{{order.city}}</td>
+      <td>{{order.zipCode}}</td>
+    </tr>
+  </table>
+</div>
+  <p></p>
+  <div class="rightDiv">
+    <a routerLink="/listorders/">Cofnij</a>
+  </div>
+</div>

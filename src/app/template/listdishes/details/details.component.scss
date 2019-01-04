@@ -1,0 +1,31 @@
+.box {
+  border: black;
+  border-style: solid;
+  border-width: 5px;
+  background-color: rgba(255, 255, 255, 0.725);
+  border-width: medium;
+  width: 50%;
+  padding: 2%;
+}
+
+.right {
+  text-align: right;
+}
+
+.rightDiv{
+  text-align: right;
+  margin: 8%;
+}
+
+.position {
+  margin: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+}
+
+.ava {
+  display: flex;
+  align-items: stretch;
+}

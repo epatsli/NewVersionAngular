@@ -1,0 +1,10 @@
+<div id="top-bar">
+  <header>
+    Pizza portal
+  </header>
+
+  <a routerLink="/shopping-cart"><img src="assets/koszyk.png" width="50" height="50" class="top-right-step"></a>
+  <a *ngIf="authService.isLogin!=true" routerLink="/admin"><img src="assets/user.png" width="50" height="50"
+                                                                class="top-right"></a>
+</div>
+

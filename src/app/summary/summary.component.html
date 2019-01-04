@@ -1,0 +1,85 @@
+<div class="dish-container">
+<div>
+  <app-shopping-cart></app-shopping-cart>
+</div>
+
+<div class="order-container">
+<h4>Adres dostawy:</h4>
+
+
+<form (ngSubmit)="saveOrder()" #loginForm="ngForm">
+  <div class = "form">Imię: <input type="text" name="firstname" [(ngModel)]="orders.firstName" id="firstName"
+                          #firstName="ngModel"
+                          required minlength="3"></div>
+  <div class = "form" *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+    <div *ngIf="firstName.errors.minlength">
+      Name must be at least 3 characters long.
+    </div>
+    <div *ngIf="firstName.errors.required">
+      Name is required.
+    </div>
+  </div>
+  <br>
+
+  <div class= "form">Nazwisko: <input type="text" name="lastname" [(ngModel)]="orders.lastName" #lastName="ngModel" required
+                         minlength="3"></div>
+
+  <div class= "form" *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+    <div *ngIf="lastName.errors.minlength">
+      Surname must be at least 3 characters long.
+    </div>
+    <div *ngIf="lastName.errors.required">
+      Surname is required.
+    </div>
+  </div>
+  <br>
+
+  <div class = "form">Telefon: <input type="text" name="phone" [(ngModel)]="orders.phone" #phone="ngModel" required minlength="9"></div>
+  <div class= "form" *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+    <div *ngIf="phone.errors.minlength">
+      Phone must be at least 9 characters long.
+    </div>
+    <div *ngIf="phone.errors.required">
+      Phone is required.
+    </div>
+  </div>
+  <br>
+
+  <div class = "form">E-mail: <input type="email" name="e-mail" [(ngModel)]="orders.email"></div>
+  <br>
+
+  <div class = "form">Miasto: <input type="text" name="city" [(ngModel)]="orders.city" #city="ngModel" required minlength="4"></div>
+  <div class= "form" *ngIf="city.invalid && (city.dirty || city.touched)">
+    <div *ngIf= "city.errors.minlength">
+      City must be at least 4 characters long.
+    </div>
+    <div *ngIf="city.errors.required">
+      City is required.
+    </div>
+  </div>
+  <br>
+
+  <div class = "form">Ulica: <input type="text" name="street" [(ngModel)]="orders.street" #street="ngModel" required minlength="4">
+  </div>
+  <div class= "form"*ngIf="street.invalid && (street.dirty || street.touched)">
+    <div *ngIf="street.errors.minlength">
+      Street must be at least 4 characters long.
+    </div>
+  </div>
+  <br>
+
+  <div class = "form">Numer domu: <input type="text" name="houseNumber" [(ngModel)]="orders.houseNumber" #houseNumber="ngModel"></div>
+  <div class= "form" *ngIf="houseNumber.invalid && (houseNumber.dirty || houseNumber.touched)">
+    <div *ngIf = "houseNumber.errors.required">
+      HouseNumber is required.
+    </div>
+  </div>
+  <br>
+
+  <div class = "form">Kod pocztowy: <input type="text" name="zipCode" [(ngModel)]="orders.zipCode"></div>
+  <br>
+
+  <input type="submit" class="button" value="Save order" [disabled]="!loginForm.form.valid">
+</form>
+</div>
+</div>

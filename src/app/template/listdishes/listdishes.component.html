@@ -1,0 +1,35 @@
+<div class="buttons">
+  <button class="button" [routerLink]="['/listdishes/add-dish'] ">Nowe danie</button>
+  <button class="button" [routerLink]="['/listorders/'] ">Lista zamówień</button>
+</div>
+
+<div class="centers">
+  <table>
+    <tr>
+      <th>Id:</th>
+      <th>Type:</th>
+      <th>Name:</th>
+      <th>Description:</th>
+      <th>Availability:</th>
+      <th>Price:</th>
+      <th>Details:</th>
+    </tr>
+
+    <tr *ngFor="let d of dish">
+      <td>{{d.id}}</td>
+      <td>{{d.type}}</td>
+      <td>{{d.name}}</td>
+      <td>{{d.description}}</td>
+
+      <td class="center"><input type="checkbox" name="available" [checked]="d.isAvailable" value="dish.isAvailable"
+                                (change)="d.isAvailable = $event.target.checked"
+                                (click)="this.changeWhenIsNotAvailability(d)"/>
+      </td>
+      <td>{{d.price}}</td>
+      <td>
+        <button [routerLink]="['details/', d.id]" class="button">Details</button>
+      </td>
+      <td><button (click)="dishService.deleteDish(d.id)"> -</button></td>
+    </tr>
+  </table>
+</div>

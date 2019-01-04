@@ -1,0 +1,30 @@
+<div class="basket-container">
+<div class="header">Your order</div>
+
+<table class="center">
+
+  <tr>
+    <th class="toLeft">Name:</th>
+    <th>Count:</th>
+    <th>Price:</th>
+
+  </tr>
+
+  <tr *ngFor="let dish of shoppingCartService.getDishes()">
+    <td class="toLeft">{{dish.name}}</td>
+    <td class="toRight"> {{dish.count}}</td>
+    <td class="toRight">{{dish.price}}</td>
+    <button class="buttonDel" (click)="shoppingCartService.delete(dish)"> -</button>
+  </tr>
+  <th class="toLeft">Total price:</th>
+  <th></th>
+  <th class="toRight">{{shoppingCartService.getTotalPrice()}}</th>
+
+</table>
+
+
+<div class="positionButton">
+  <!--  <button class="summary" (click)="hiddenButton()">{{shoppingCartService.value}}</button>  -->
+    <button class="button" [routerLink]="['/shopping-cart/summary']">Zamówienie</button>
+  </div>
+  </div>

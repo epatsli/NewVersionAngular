@@ -1,0 +1,111 @@
+.addDish-container{
+  text-align: center;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.725);
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 15px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.orderBox{
+  display: flex;
+}
+
+#orderInfo{
+  padding:4px;
+  border: 1px solid;
+  background-color: rgba(28, 226, 28, 0.692);
+  margin: auto;
+  margin-top: 40px;
+}
+.visible{
+  display: inline-block;
+}
+.nonVisible{
+  display:none;
+}
+
+.statusInfo{
+  background-color: rgba(255, 255, 255, 0.699);
+  border-radius: 10px;
+  .invalid{
+    color: red;
+  }
+  .valid{
+    color: rgb(3, 131, 9);
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 22px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #515151;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #808080}
+
+.button:active {
+  background-color: #696969;
+  box-shadow: 0px 0px #666;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 5px 7px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border-left: 0px;
+  border-right: 0px;
+  background-color: rgba(255, 255, 255, 0.767);
+  &:focus{
+    background-color: rgba(248, 247, 166, 0.452);
+  }
+  font-size: 15px;
+  text-align: center;
+}
+
+input[type=checkbox] {
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius:0px;
+  -webkit-appearance:button;
+  border: solid 2px rgba(29, 29, 9, 1);
+  background-color:#f2f7d0b7;
+  white-space: nowrap;
+  overflow:hidden;
+  width: 15px;
+  height: 15px;
+}
+
+input[type=checkbox]:hover {
+  box-shadow:0px 0px 10px #d9ff00;
+  background-color: azure;
+}
+
+input[type=checkbox]:checked {
+  background-color:rgb(45, 189, 8);
+}
+
+.description{
+  word-break: break-word;
+  height: 50px;
+}
+
+.back {
+  background-color: rgba(255, 255, 255, 0.725);
+  font-family: 'Permanent Marker';
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+}

@@ -1,0 +1,97 @@
+
+.innercontainer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.body {
+  min-height: 100%;
+  flex-grow: 1;
+  padding: 15px;
+  border: 0px;
+}
+
+.sidebar {
+  border: 1px solid;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 100%;
+  width: 25%;
+  background: #A9A9A9;
+  padding: 10px;
+  margin: 2%;
+  flex-direction: column;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #909090;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {
+  background-color: #808080
+}
+
+.button:active {
+  background-color: #696969;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 30% 5% 35%;
+}
+
+
+
+
+
+$headerColor: rgba(255, 255, 255, 0.534);
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  div{
+    margin-right: 50px;
+  }
+  margin-bottom: 20px;
+  background-color: $headerColor;
+  padding: 5px;
+  box-shadow: 0px 0px 5px 5px $headerColor;
+}
+
+
+.title{
+  padding: 5px;
+  background-color: #faeb178f;
+  border: 4px outset #FF8C00;
+  border-radius: 25%;
+  font-family: 'Impact', cursive;
+  // font-family: 'Permanent Marker', cursive;
+}
+
+.menuElement{
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  &:hover{
+    background-color: #faeb1775
+  }
+
+  outline: 0;
+}

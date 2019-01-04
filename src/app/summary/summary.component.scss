@@ -1,0 +1,82 @@
+:host {
+// box-sizing: border-box;
+//  display: none;
+//  position: absolute;
+//  width: 40%;
+//  height: auto;
+ // padding: 20px 10px;
+//  background: #A9A9A9;
+ // flex-grow: 1;
+ // justify-content: center;
+//  align-items: center;
+ // margin: 1%;
+//  border: 1px solid;
+  font-family: 'Permanent Marker', cursive;
+}
+
+:host.is-open {
+  display: block;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 22px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #515151;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #808080}
+
+.button:active {
+  background-color: #696969;
+  box-shadow: 0px 0px #666;
+}
+
+$bgColor:rgba(255, 255, 255, 0.725);
+
+.order-container{
+
+  text-align: center;
+  width: 70%;
+  margin-left: 100px;
+ // margin-right:auto;
+  background-color: rgba(255, 255, 255, 0.725);
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 15px;
+  font-size: 16px;
+
+
+}
+
+.dish-container{
+  display: flex;
+  text-align: center;
+  width: 65%;
+  margin-left: 50px;
+  margin-right:auto;
+}
+
+.dish-container > div {
+//  margin: 70px;
+  padding: 10px;
+}
+
+.form{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 3;
+
+}
+
+.order-container > h4 {
+  font-size: 20px;
+}
+

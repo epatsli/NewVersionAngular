@@ -1,0 +1,32 @@
+.rightDiv{
+  text-align: right;
+  margin: 8%;
+}
+
+.center {
+  text-align: center;
+}
+
+table, td, th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: auto;
+}
+
+th {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.725);
+}
+
+td{
+  padding: 15px;
+}
+.centers {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
