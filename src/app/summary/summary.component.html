@@ -45,9 +45,6 @@
   </div>
   <br>
 
-  <div class = "form">E-mail: <input type="email" name="e-mail" [(ngModel)]="orders.email"></div>
-  <br>
-
   <div class = "form">Miasto: <input type="text" name="city" [(ngModel)]="orders.city" #city="ngModel" required minlength="4"></div>
   <div class= "form" *ngIf="city.invalid && (city.dirty || city.touched)">
     <div *ngIf= "city.errors.minlength">

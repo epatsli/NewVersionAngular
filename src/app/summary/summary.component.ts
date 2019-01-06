@@ -17,7 +17,6 @@ export class SummaryComponent implements OnInit {
     firstName: string;
     lastName: string;
     phone: string;
-    email: string;
     city: string;
     street: string;
     zipCode: string;
@@ -43,7 +42,7 @@ export class SummaryComponent implements OnInit {
     if (this.getTotalCost() === 0) {
       this.prepareView();
     } else {
-      this.shoppingcartService.saveOrder(this.orders).subscribe(x => alert('Order was accepted for execution.'));
+      this.shoppingcartService.saveOrder(this.orders).subscribe(x => alert('Zamówienie zostało przyjęte do realizacji.'));
       this.shoppingcartService.cleanShoppingCar();
       this.prepareView();
     }
