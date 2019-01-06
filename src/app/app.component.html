@@ -8,6 +8,7 @@
   <div class="menu menuElement" [routerLink]="['/dishes']">MENU</div>
   <div class="basket menuElement" [routerLink]="['/shopping-cart/summary']">ZAMÓWIENIE</div>
   <div class="login menuElement" *ngIf="authService.isLogin!=true" [routerLink]="['/admin']">LOGOWANIE</div>
+  <div class="login menuElement" *ngIf="authService.isLogin!=false" routerLink="/listdishes">Panel administratora</div>
   <div class="login menuElement" *ngIf="authService.isLogin!=false" (click)="authService.logout()" routerLink="/dishes">WYLOGOWANIE</div>
 </div>
 <router-outlet></router-outlet>

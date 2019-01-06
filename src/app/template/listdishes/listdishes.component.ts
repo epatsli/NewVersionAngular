@@ -50,7 +50,7 @@ export class ListdishesComponent implements OnInit {
     }
 
     console.log(dish.id);
-    this.sub = this.dishService.updateDish(dish).subscribe();
+    this.sub = this.dishService.updateDish(dish).subscribe(res => dish = res);
   }
 
   deleteDish(id: number) {
@@ -64,6 +64,13 @@ export class ListdishesComponent implements OnInit {
     this.dishService.deleteAllDish().subscribe(res => this.dish = res);
   }
 /*
+  updateAvailableDish(isAvailable: boolean) {
+    this.dishService.updateDish(this.dish_.id,{name: this.dish_.name, description: this.dish_.description, isAvailable: isAvailable, type: this.dish_.type, price: this.dish_.price})
+      .subscribe(() => {
+      this.dish = this.dish.filter(d => d.id !== this.dish_.id);
+    });
+  }
+
   deleteDish() {
     this.dishService.deleteDish(this.dish_.id)
       .subscribe(

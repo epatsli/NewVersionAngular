@@ -14,7 +14,7 @@ export class ListdishesService {
   }
 
   getDishes(): Observable<Dish[]> {
-    return this.http.get<Dish[]>('/api/dishes');
+    return this.http.get<Dish[]>('/api/dishes/admin');
   }
 
 }

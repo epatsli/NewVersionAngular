@@ -1,7 +1,7 @@
 table, td, th {
-  border: 1px solid #ddd;
+ // border: 1px solid #ddd;
   text-align: left;
-  background-color: rgba(255, 255, 255, 0.725);
+ // background-color: rgba(255, 255, 255, 0.725);
 }
 
 table {
@@ -9,15 +9,18 @@ table {
   width: auto;
   margin-left: auto;
   margin-right: auto;
+ // padding: 15px;
 }
 
 th {
+
   padding: 15px;
 //  background-color: #A9A9A9
- // background-color: rgba(255, 255, 255, 0.725);
+  background-color: rgba(255, 255, 255, 0.725);
 }
 
 td {
+  border: 1px solid #ddd;
   padding: 15px;
 }
 
@@ -113,4 +116,13 @@ td {
   .menuBox{
     display:flex;
   }
+}
+
+.clean{
+  border: none;
+}
+
+.back {
+  background-color: rgba(255, 255, 255, 0.725);
+  border: 1px solid #ddd;
 }

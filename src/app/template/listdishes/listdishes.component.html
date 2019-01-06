@@ -1,36 +1,38 @@
 <div class="buttons">
   <button class="button" [routerLink]="['/listdishes/add-dish'] ">Nowe danie</button>
   <button class="button" [routerLink]="['/listorders/'] ">Lista zamówień</button>
-  <button (click)="deleteAllDish()"> Usuń wszystkie dania</button>
+  <button class="button" (click)="deleteAllDish()"> Usuń wszystkie dania</button>
 </div>
 
 <div class="centers">
   <table>
-    <tr>
+    <tr class="back">
       <th>Id:</th>
-      <th>Type:</th>
-      <th>Name:</th>
-      <th>Description:</th>
-      <th>Availability:</th>
-      <th>Price:</th>
-      <th>Details:</th>
+      <th>Typ:</th>
+      <th>Nazwa:</th>
+      <th>Opis:</th>
+      <th>Dostępność:</th>
+      <th>Cena:</th>
+      <th>Szczegóły:</th>
     </tr>
 
     <tr *ngFor="let d of dish">
-      <td>{{d.id}}</td>
-      <td>{{d.type}}</td>
-      <td>{{d.name}}</td>
-      <td>{{d.description}}</td>
+      <td class="back">{{d.id}}</td>
+      <td class="back">{{d.type}}</td>
+      <td class="back">{{d.name}}</td>
+      <td class="back">{{d.description}}</td>
 
-      <td class="center"><input type="checkbox" name="available" [checked]="d.isAvailable" value="dish.isAvailable"
-                                (change)="d.isAvailable = $event.target.checked"
-                                (click)="this.changeWhenIsNotAvailability(d)"/>
+      <td class="back"> <div><input type="checkbox" name="available" [checked]="d.isAvailable" value="d.isAvailable"
+                                    (change)="d.isAvailable = $event.target.checked" /></div>
+        <div>{{d.isAvailable}}</div>
+
+
       </td>
-      <td>{{d.price}}</td>
-      <td>
-        <button [routerLink]="['details/', d.id]" class="button">Details</button>
+      <td class="back">{{d.price}}</td>
+      <td  class="back">
+        <button [routerLink]="['details/', d.id]" class="button">Szczegóły</button>
       </td>
-      <td><button (click)="deleteDish(d.id)"> -</button></td>
+      <td class="clean"><button class="buttonDel" (click)="deleteDish(d.id)"> -</button></td>
     </tr>
   </table>
 </div>

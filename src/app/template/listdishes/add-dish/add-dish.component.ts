@@ -11,7 +11,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./add-dish.component.scss']
 })
 export class AddDishComponent implements OnInit {
-
+  disha: Dish[] = [];
   formAddDish = new FormGroup({
     name: new FormControl('', Validators.required),
     isAvailable: new FormControl(''),
@@ -28,10 +28,10 @@ export class AddDishComponent implements OnInit {
   onSubmit () {
     const dish: Dish = this.formAddDish.value;
     if (this.formAddDish.value.isAvailable === '') {
-      dish.isAvailable = false;
+      dish.isAvailable = true;
     }
     if (this.formAddDish.status === 'VALID') {
-      this.dishesService.saveDish(dish).subscribe();
+      this.dishesService.saveDish(dish).subscribe(res => { res; } ) ;
       this.router.navigate(['/listdishes']);
     } else {
       alert('Wypenij pola poprawnie!');

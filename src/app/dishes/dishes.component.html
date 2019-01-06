@@ -10,17 +10,17 @@
   <button class="button" (click)="getDrinks()">Napoje</button>
 
   <table>
-    <tr>
+    <tr class="back">
       <th>Name:</th>
       <th>Description:</th>
       <th>Price:</th>
     </tr>
 
     <tr *ngFor="let d of dish">
-      <td>{{d.name}}</td>
-      <td>{{d.description}}</td>
-      <td>{{d.price}}</td>
-      <button class="buttonAdd" (click)="addDishToOrder(d)"> +</button>
+      <td class="back">{{d.name}}</td>
+      <td class="back">{{d.description}}</td>
+      <td class="back">{{d.price}}</td>
+      <td class="clean"><button class="buttonAdd" (click)="addDishToOrder(d)"> +</button> </td>
     </tr>
   </table>
 </div>

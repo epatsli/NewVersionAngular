@@ -53,6 +53,11 @@ export class DishesService {
     return this.http.put<Dish>(`/api/dishes/${dish.id}`, dish);
   }
 
+/*
+  updateDish(id: number, value: any): Observable<Object> {
+    return this.http.put(`/api/dishes/${id}`, value);
+  }
+  */
   deleteDish(id: number): Observable<any> {
     return this.http.delete<any>(`/api/dishes/${id}`);
   }

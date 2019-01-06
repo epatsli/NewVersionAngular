@@ -13,7 +13,7 @@ export class ListordersService {
   }
 
   getOrders(): Observable<Order[]> {
-    return this.http.get<Order[]>('http://localhost:8080/api/orders');
+    return this.http.get<Order[]>('/api/orders');
   }
 }
 
