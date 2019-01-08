@@ -65,7 +65,7 @@ export class ShoppingCartService {
 
   saveOrder(order: Order): Observable<Order> {
     let dishesIds: number[] = [];
-    const amountDish: number[] = [];
+    let amountDish: number[] = [];
 
     order.dishIds = dishesIds;
     order.amountDish = amountDish;
